@@ -247,10 +247,9 @@ a {
 }
 
 .song-container .nav-links {
-  position: absolute;
-  top: 60%;
-  left: 0%;
   z-index: 2;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .song-container .nav-links .items a {
