@@ -1,0 +1,1195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.hero-bg {
+  background: url(images/bts-poster.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  position: relative;
+}
+
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+  z-index: 1;
+}
+
+.main-logo .initials {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.main-logo .initials h1 {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.822);
+  font-size: 8rem;
+}
+
+.main-logo .initials .first {
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: LeftSlide 1s forwards;
+}
+
+@keyframes LeftSlide {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.main-logo .initials .third {
+  transform: translateX(100px);
+  opacity: 0;
+  animation: RightSlide 1s forwards;
+}
+
+@keyframes RightSlide {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.main-logo .initials .second {
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: TopSlide 1s forwards;
+}
+
+@keyframes TopSlide {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* --------------- Home Section ------------*/
+
+.home-section {
+  height: 78.8vh;
+  background: linear-gradient(#200122, #6f0000);
+  background-size: 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.nav-links {
+  position: absolute;
+  top: 1%;
+  left: 0%;
+  z-index: 2;
+}
+
+.nav-links .items a {
+  color: white;
+  display: block;
+  background-color: rgba(76, 128, 173, 0.349);
+  padding: 1rem 2rem;
+  margin-bottom: 0.3rem;
+  width: 100px;
+  text-align: center;
+  /* position: sticky; */
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links .items i {
+  display: none;
+}
+
+.nav-links .items a:hover {
+  width: 130px;
+  border-radius: 0 20px 20px 0;
+}
+
+.nav-links .items a:hover i {
+  display: inline-block;
+}
+
+.nav-links .item1 a:hover {
+  background-color: chocolate;
+  color: black;
+}
+
+.nav-links .item2 a:hover {
+  background-color: cornflowerblue;
+  color: black;
+}
+
+.nav-links .item3 a:hover {
+  background-color: teal;
+  color: black;
+}
+
+.nav-links .item4 a:hover {
+  background-color: gold;
+  color: black;
+}
+
+.main-description p {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 30px 30px 0 150px;
+  color: white;
+}
+
+.bts-image {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+.bts-image img {
+  height: 270px;
+  width: auto;
+  border-bottom: 10px solid gold;
+  border-radius: 50px;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: FadeIn 1s forwards;
+}
+
+@keyframes FadeIn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.footer {
+  padding-top: 65rem;
+}
+
+.social-media-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgba(240, 248, 255, 0.349);
+  padding: 2rem 0;
+}
+
+.social-media-links h3 {
+  transition: all 0.5s ease-in-out;
+}
+
+.social-media-links a {
+  font-size: 3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.social-media-links a:hover {
+  color: rgb(255, 230, 0);
+}
+
+.social-media-links a:hover ~ h3 {
+  color: rgb(255, 230, 0);
+}
+
+/* $$$$$$$$$$$$$$$$$$ Song Page Styling $$$$$$$$$$$$$$$$$$$ */
+
+.song-body {
+  height: 650vh;
+  background: url(images/song-bg.jpg);
+  background-size: 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.song-container .nav-links {
+  position: absolute;
+  top: 60%;
+  left: 0%;
+  z-index: 2;
+}
+
+.song-container .nav-links .items a {
+  color: rgb(0, 0, 0);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.219);
+  padding: 1rem 2rem;
+  margin-bottom: 0.3rem;
+  width: 100px;
+  text-align: center;
+  /* position: sticky; */
+  transition: all 0.3s ease-in-out;
+}
+
+.song-container .nav-links .items i {
+  display: none;
+}
+
+.song-container .nav-links .items a:hover {
+  width: 200px;
+  border-radius: 0 20px 20px 0;
+}
+
+.song-container .nav-links .items a:hover i {
+  display: inline-block;
+}
+
+.song-container .nav-links .item1 a:hover {
+  background-color: chocolate;
+  color: black;
+}
+
+.song-container .nav-links .item2 a:hover {
+  background-color: cornflowerblue;
+  color: black;
+}
+
+.song-container .nav-links .item3 a:hover {
+  background-color: teal;
+  color: black;
+}
+
+.song-container .nav-links .item4 a:hover {
+  background-color: gold;
+  color: black;
+}
+
+.song-container {
+  height: 100vh;
+  position: relative;
+}
+
+.btsImage {
+  text-align: center;
+}
+
+.btsImage img {
+  height: 300px;
+  width: 430px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: 5rem auto 0 auto;
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: imageSlidingFromTop 1s forwards;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes imageSlidingFromTop {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.btsImage h1 {
+  width: 433px;
+  margin: 5rem 0 7rem 0;
+  color: rgb(7, 5, 5);
+  background-color:#6f000046;
+  font-size: 6rem;
+  opacity: 0;
+  animation: AppearingBTS 1s forwards;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes AppearingBTS {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.albums {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.albums .album img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.albums .album a {
+  display: block;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  width: 80px;
+  margin: 2rem 0;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.albums .album a:hover {
+  background-color: gold;
+  font-weight: 700;
+}
+
+.indivisuals img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.indivisuals h3 {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.indivisuals audio {
+  width: 400px;
+  display: block;
+  margin: auto;
+}
+
+.song-footer {
+  padding-top: 7rem;
+}
+
+.social-media-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgba(20, 20, 20, 0.555);
+  padding: 2rem 0;
+}
+
+.song-footer .social-media-links h3 {
+  transition: all 0.5s ease-in-out;
+  color: aliceblue;
+}
+
+.song-footer .social-media-links a {
+  font-size: 3rem;
+  transition: all 0.5s ease-in-out;
+  color: aliceblue;
+}
+
+.song-footer .social-media-links a:hover {
+  color: rgb(255, 0, 0);
+}
+
+.song-footer .social-media-links a:hover ~ h3 {
+  color: rgb(255, 0, 0);
+}
+
+.go-to-top a {
+  color: white;
+  font-size: 3rem;
+  display: block;
+  margin: 1rem 24rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.go-to-top a:hover {
+  color: gold;
+  transform: rotate(180deg);
+}
+
+/* $$$$$$$$$$$$$$$$$$ About Page Styling $$$$$$$$$$$$$$$$$$$ */
+
+.about-container {
+    width: 433px;
+    height: 630vh;
+    position: relative;
+    background-image: url(images/about-bg.jpg);
+    background-size: 1500%;
+    background-repeat: no-repeat;
+}
+
+.about-heading {
+    height: 100vh;
+    background: url(images/283-2836895_bts-phone-wallpaper-hd-bts-laptop-wallpaper-hd.jpg);
+    background-size: 100%;
+    background-position: center;
+
+}
+
+.about-heading::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
+    z-index: 0;
+}
+
+.about-container .nav-links {
+  position: absolute;
+  top: 16.1%;
+  left: 0%;
+  z-index: 2;
+}
+
+.about-container .nav-links .items a {
+  color: rgb(253, 253, 253);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.384);
+  padding: 1rem 2rem;
+  margin-bottom: 0.3rem;
+  width: 100px;
+  text-align: center;
+  /* position: sticky; */
+  transition: all 0.3s ease-in-out;
+}
+
+.about-container .nav-links .items i {
+  display: none;
+}
+
+.about-container .nav-links .items a:hover {
+  width: 200px;
+  border-radius: 0 20px 20px 0;
+}
+
+.about-container .nav-links .items a:hover i {
+  display: inline-block;
+}
+
+.about-container .nav-links .item1 a:hover {
+  background-color: chocolate;
+  color: black;
+}
+
+.about-container .nav-links .item2 a:hover {
+  background-color: cornflowerblue;
+  color: black;
+}
+
+.about-container .nav-links .item3 a:hover {
+  background-color: teal;
+  color: black;
+}
+
+.about-container .nav-links .item4 a:hover {
+  background-color: gold;
+  color: black;
+}
+
+
+.about-heading img {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 4rem 0 0 0 ;
+    z-index: 99;
+}
+
+.about-heading .initials {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    z-index: 3;
+  }
+  
+  .about-heading .initials h1 {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.822);
+    font-size: 5.5rem;
+  }
+  
+  .about-heading .initials .first {
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: LeftSlide 1s forwards;
+  }
+  
+  @keyframes LeftSlide {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  
+  .about-heading .initials .third {
+    transform: translateX(100px);
+    opacity: 0;
+    animation: RightSlide 1s forwards;
+  }
+  
+  @keyframes RightSlide {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  
+  .about-heading .initials .second {
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: TopSlide 1s forwards;
+  }
+  
+  @keyframes TopSlide {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  .about-container .about-heading h3 {
+      font-size: 1rem;
+      color: white;
+      position: absolute;
+      top: 8.7%;
+      left: 50%;
+      transform: translate(-50%,-8.7%);
+      z-index: 3;    
+    }
+  
+  .about-container .about-heading a {
+      color: aliceblue;
+      font-size: 4rem;
+      position: absolute;
+      top: 9%;
+      left: 50%;
+      transform: translate(-50%,-9%);
+      opacity: 0;
+      animation: appearingButton 2s forwards;
+      transition: all 1s ease-in-out;
+      z-index: 7;
+  }
+
+  .about-container .about-heading a:hover {
+      color: orange ;
+  }
+
+  @keyframes appearingButton {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+  }
+  .about-container .about-heading a i {
+      transform: rotate(90deg);
+  }
+
+  .each-member {
+    height: 500vh;
+  }
+
+  .bts-members .each-members .wearebts {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .bts-members .wearebts .image img {
+      height: 300px;
+      width: 350px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      margin: 0 auto 2rem auto;
+      border-radius: 20px;
+  }
+
+  .bts-members .wearebts .description {
+    text-align:justify;
+  }
+
+  .bts-members .wearebts .description h2 {
+    text-align: center;
+  }
+
+  .bts-members .wearebts .description a {
+    display: block;
+    width: 70px;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0);
+    border: 2px solid rgba(0, 0, 0, 0.507);
+    margin: 2rem auto;
+    padding: 0.6rem;
+    transition: all 1s ease-in-out;
+  }
+
+  .bts-members .wearebts .description a:hover {
+    background: #0000004b;
+    border: none;
+  }
+
+  .bts-members .wearebts {
+    padding:  2rem;
+    margin: 2rem 2rem;
+    border-radius: 20px;
+    background-color: rgba(209, 209, 209, 0.205);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .bts-members .each-member .bts-jimin img {
+      object-position: center;
+  }
+  .bts-members .each-member .bts-v img {
+      object-position: center;
+  }
+  .bts-members .each-member .bts-jungkook img {
+      object-position: center;
+  }
+
+  .about-container .bts-members h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 2rem 0;
+      margin: 18rem 2rem 2rem 2rem;
+      border-radius: 20px;
+      background-color: rgba(95, 158, 160, 0.13);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      font-family: 'Abril Fatface', cursive;
+  }
+
+  .about-container footer {
+    margin: -13rem 0 0 0;
+  }
+
+/* Media Queries */
+
+@media screen and (min-width: 375px) {
+    /* ############### Home Page ############## */
+
+    .hero-bg {
+        background: url(images/bts-poster.jpg);
+        background-size: 120%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 50vh;
+        position: relative;
+      }
+
+      .home-section {
+        height: 75vh;
+        background: linear-gradient(#200122, #6f0000);
+        background-size: 140%;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+
+      .main-logo .initials {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+      }
+      
+      .main-logo .initials h1 {
+        display: inline-block;
+        color: rgba(255, 255, 255, 0.822);
+        font-size: 5.5rem;
+      }
+      
+      .main-logo .initials .first {
+        transform: translateX(-100px);
+        opacity: 0;
+        animation: LeftSlide 1s forwards;
+      }
+      
+      @keyframes LeftSlide {
+        0% {
+          transform: translateX(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      
+      .main-logo .initials .third {
+        transform: translateX(100px);
+        opacity: 0;
+        animation: RightSlide 1s forwards;
+      }
+      
+      @keyframes RightSlide {
+        0% {
+          transform: translateX(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      
+      .main-logo .initials .second {
+        transform: translateY(-100px);
+        opacity: 0;
+        animation: TopSlide 1s forwards;
+      }
+      
+      @keyframes TopSlide {
+        0% {
+          transform: translateY(-100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+
+      .main-description p {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        padding: 20px 20px 0 120px;
+        color: white;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 4%;
+        left: 0%;
+        z-index: 2;
+      }
+
+      .bts-image {
+        position: absolute;
+        top: 35%;
+        left: 10%;
+      }
+
+      .bts-image img {
+        height: 230px;
+        width: auto;
+        border-bottom: 10px solid gold;
+        border-radius: 50px;
+        transform: translateY(100px);
+        opacity: 0;
+        animation: FadeIn 1s forwards;
+      }
+      
+      @keyframes FadeIn {
+        0% {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+      }
+
+      .footer {
+        padding-top: 57rem;
+      }
+
+      .social-media-links a {
+        font-size: 3rem;
+        transition: all 0.5s ease-in-out;
+        color: white;
+      }
+
+      .social-media-links h3 {
+        transition: all 0.5s ease-in-out;
+        color: white;
+      }
+
+
+    /* ############### Songs Page ############## */
+
+
+  .song-body {
+    height: 650vh;
+    width: 433px;
+    background:url(images/song-bg.jpg);
+    background-size: 1100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .song-container {
+    height: 100vh;
+    width: 433px;
+    position: relative;
+  }
+
+  .btsImage img {
+    height: 400px;
+    width: 400px;
+    display: block;
+    text-align: center;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0px;
+    margin: 1rem 1rem;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: imageSlidingFromTop 1s forwards;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  @keyframes imageSlidingFromTop {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  .btsImage h1 {
+    width: 400px;
+    display: block;
+    margin: 2rem 1rem 7rem 1rem;
+    color: rgb(7, 5, 5);
+    font-size: 5rem;
+    opacity: 0;
+    animation: AppearingBTS 1s forwards;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  @keyframes AppearingBTS {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .albums {
+    width: 300px;
+    margin: 1rem 0 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .albums .album img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .indivisuals img {
+    width: 350px;
+    height: auto;
+    display: block;
+    margin: 1rem 0 1rem 4rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .indivisuals .be img {
+      margin: 20rem 0 0 4rem;
+  }
+
+  .indivisuals h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .indivisuals audio {
+    width: 350px;
+    display: block;
+    margin: auto;
+  }
+
+  .song-container .nav-links {
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    z-index: 2;
+  }
+
+  .song-footer {
+    padding-top: 2rem;
+    width: 433px;
+    display: block;
+    margin: auto;
+  }
+
+  .go-to-top a {
+    color: white;
+    font-size: 3rem;
+    display: block;
+    margin: 1rem 20rem;
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .go-to-top a:hover {
+    color: gold;
+  }
+
+  .albums .album a {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    width: 80px;
+    margin: 2rem auto;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .albums .album a:hover {
+    background-color: gold;
+    font-weight: 700;
+  }
+  
+}
+
+/* ######################## Contact Page Styling #########################*/
+
+.contact-container {
+  background: url(images/contact-background.jpg);
+  background-size: 300%;
+  background-repeat: no-repeat;
+  height: 170vh;
+  position: relative;
+}
+
+.contact-container .nav-links {
+  position: absolute;
+  top: 82%;
+  left: 0%;
+}
+
+.contact-container .nav-links a {
+  background-color: #00000046;
+}
+
+.contact-container .contact-header-image img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-container .starting-line p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  transform: translateX(-100px);
+  opacity: 0;
+  animation: startingLineP 1s forwards;
+}
+
+@keyframes startingLineP {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.contact-container .starting-line h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  transform: translateX(100px);
+  opacity: 0;
+  animation: startingLineH2 1s forwards;
+}
+
+@keyframes startingLineH2 {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.flex-input-lable {
+  display: block;
+  margin: 3rem auto;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #73deff2f;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-input-lable input {
+  display: block;
+  width: 260px;
+  margin: auto;
+  padding: 1rem ;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-input-lable input:hover {
+  outline: none;
+  border-bottom: 1px solid goldenrod;
+}
+
+.flex-input-lable textarea {
+  display: block;
+  width: 260px;
+  margin: auto;
+  padding: 1rem ;
+  font-size: 1.5rem;
+  border: none;
+  background: transparent;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-input-lable textarea:hover {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid goldenrod;
+  border-top: 1px solid goldenrod;
+}
+
+.flex-input-lable ::placeholder {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgba(0, 0, 0, 0.507);
+}
+
+.flex-input-lable .btns {
+  text-align: center;
+}
+
+.flex-input-lable button {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: auto;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0.7rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-input-lable button[type='submit']:hover {
+  background-color: rgba(128, 255, 0, 0.521);
+}
+
+.flex-input-lable button[type='reset']:hover {
+  background-color: rgba(255, 0, 0, 0.521);
+}
+
+.lastImage img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+  display: block;
+  margin: 5rem auto 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.love-army {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.185);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.love-army i {
+  color: red;
+}
+
+.love-army p {
+  font-family: 'Poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.contact-container .footer {
+  padding-top: 20rem;
+}
